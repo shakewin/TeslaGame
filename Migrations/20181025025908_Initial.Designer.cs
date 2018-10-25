@@ -11,7 +11,7 @@ using TeslaGame.Models;
 namespace TeslaGame.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20181025022332_Initial")]
+    [Migration("20181025025908_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
