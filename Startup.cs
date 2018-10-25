@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using TeslaGame.Models;
 
 namespace TeslaGame
 {
@@ -13,6 +14,7 @@ namespace TeslaGame
     {
         public void ConfigureServices(IServiceCollection services)
         {
+			services.AddTransient<IProductRepository, TestProductRepository>();
 			services.AddMvc();
         }
 
