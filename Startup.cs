@@ -23,7 +23,7 @@ namespace TeslaGame
 
         public void ConfigureServices(IServiceCollection services)
         {
-			services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["Data:SportsStoreProducts:ConnectionString"]));
+			services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["Data:TeslaGameProducts:ConnectionString"]));
 			services.AddTransient<IProductRepository, EFProductRepository>();
 			services.AddMvc();
         }
