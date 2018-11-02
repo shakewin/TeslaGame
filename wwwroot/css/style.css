@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css?family=Bai+Jamjuree:300,400,700|Roboto+Condensed:300,400,700&subset=cyrillic');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bai Jamjuree', 'Roboto Condensed', sans-serif;
+}
+
+* {
+    text-decoration: none;
+    outline: none;
+}
+
+:root {
+    --dark-bg: rgb(19, 18, 18);
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.header {
+    grid-column: span 12;
+
+    font-weight: 700;
+}
+
+.header .wrapper
+{
+    width: 80%;
+}
+
+.header img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: -8px;
+}
+
+.header a {
+    color: var(--dark-bg);
+    font-size: 22px;
+}
+
+.promo {
+    grid-column: span 12;
+    background-image: url(../img/bg-promo.png);
+    min-height: 300px;
+    color: #fff;
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(72, 22, 167);
+}
+
+.promo h4{
+    padding-top: 35px;
+    text-align: center;
+    font-size: 35px;
+    margin: 0;
+}
+
+.promo p {
+    margin-top: 30px;
+    font-size: 20px;
+    padding-bottom: 30px;
+    margin-bottom: 0;
+}
+
+.dbg {
+    background-color: rgba(20, 14, 32, 0.512);
+    min-height: 300px;
+}
+
+.navbar {
+    grid-column: span 3;
+
+    text-align: center;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 20px 25px;
+}
+
+.menu li {
+    transition: all .3s;
+}
+.menu li:hover {
+    transition: all .3s;
+    box-shadow: inset 0 4em var(--dark-bg);
+}
+
+.menu li:hover a {
+    transition: all .3s;
+    color: #fff;
+}
+.menu li:first-child a {
+    padding-top: 20px;
+}
+.menu li:last-child a {
+    padding-bottom: 20px;
+}
+.menu li a {
+    display: block;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: var(--dark-bg);
+    font-size: 21px;
+    font-weight: 700;
+    transition: all .3s;
+}
+
+.products {
+    grid-column: span 9;
+    display : grid;
+    grid-template-columns: repeat(3, 4fr);
+}
+
+.product {
+    grid-column: span 1;
+
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.product img {
+    width: 345px;
+    height: 160px;
+}
+
+.product p {
+    margin: 10px 5px;
+}
+
+.price {
+    font-size: 24px;
+    padding-left: 21px;
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+.product button {
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: rgb(251, 243, 243);
+    color: var(--dark-bg);
+    border: 2px solid var(--dark-bg);
+    transition: all .2s;
+}
+
+.product button:hover {
+    box-shadow: inset 6em 0 var(--dark-bg);
+    color: whitesmoke;
+}
+
+.product button:hover .price{
+    color: var(--dark-bg);
+}
+
+.footer {
+    grid-column: span 12;
+    display : grid;
+    grid-template-columns: repeat(3, 4fr);
+
+    background-color: var(--dark-bg);
+}
+
+.advantage {
+    grid-column: span 1;
+
+    text-align: center;
+    margin: 25px 0;
+}
+
+.advantage p {
+    margin: 0;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    padding-bottom: 10px;
+    transition: all .2s;
+}
+
+.advantage p:hover {
+    color: rgb(184, 177, 177);
+    transition: all .2s;
+}
+
+.advantage img {
+    margin: 15px 0;
+    width: 45px;
+    height: 45px;
+}
+
+.copyright {
+    grid-column: span 3;
+
+    color: #fff;
+    font-weight: 300;
+    padding: 15px 0;
+    font-size: 12px;
+    border-top: 1px solid rgba(212, 197, 197, 0.445);
+}

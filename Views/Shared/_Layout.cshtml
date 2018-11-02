@@ -2,11 +2,57 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link href="~/css/style.css" rel="stylesheet" />
     <title>TeslaGame</title>
 </head>
 <body>
-    <div>
-        @RenderBody()
+    <div class="main">
+        <div class="header">
+            <div class="wrapper">
+                <h4>
+                    <img src="~/img/atom.png" alt="atom">
+                    <a href="#">Tesla Game</a>
+                </h4>
+            </div>
+        </div>
+        <div class="promo">
+            <div class="dbg">
+                <div class="wrapper">
+                    <h4>Что такое Tesla Game?</h4>
+                    <p>
+                        В нашем интернет-магазине вы сможете гарантированно приобрести ключи к играм от Steam, Uplay, Battle.net и прочих популярных игровых платформ.
+                        Наш магазин делает все для того, чтобы ваши покупки проходили быстро, с максимальным удобством и безопасностью, а цены оставались максимально доступными.
+                        Работая на рынке компьютерных игр с 2015 года, мы приобретали бесценный опыт, внимательно выслушивали все мнения и пожелания покупателей.
+                        В результате наш сервис стал максимально простым и удобным, а процедура покупки невероятно легкой. Сегодня нас знают и доверяют сотни тысяч игроков в
+                        России и соседних странах. Это намного удобнее, чем идти в магазин или заказывать игры на ПК в интернете с доставкой на дом. Всего пара минут – и вы получите ключ
+                        активации.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="navbar">
+            Put something useful here later
+        </div>
+        <div class="products">
+            @RenderBody()
+        </div>
+        <div class="footer">
+            <div class="advantage">
+                <img src="img/key.png" alt="key">
+                <p>Лицензионные ключи от официальных издателей</p>
+            </div>
+            <div class="advantage">
+                <img src="img/discount.png" alt="discount">
+                <p>Регулярные акции, скидки и бонусы</p>
+            </div>
+            <div class="advantage">
+                <img src="img/gear.png" alt="gear">
+                <p>Гарантированная техподдержка вашей покупки</p>
+            </div>
+            <div class="wrapper">
+                <div class="copyright">© 2015–2018 TeslaGame</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
