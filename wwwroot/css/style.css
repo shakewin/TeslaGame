@@ -165,6 +165,22 @@ body {
     color: var(--dark-bg);
 }
 
+.btn {
+    padding: 6px 12px;
+    border-radius: 3px;
+    margin: 1px;
+}
+
+.btn-select {
+    background-color: var(--dark-bg);
+    color: rgb(251, 243, 243);
+}
+
+.btn-unselect {
+    background-color: rgb(170, 160, 160);
+    color: var(--dark-bg);
+}
+
 .footer {
     grid-column: span 12;
     display : grid;
