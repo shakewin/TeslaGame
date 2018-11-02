@@ -37,7 +37,7 @@ namespace TeslaGame
 			{
 				routes.MapRoute(
 					name: "pagination",
-					template: "products/page{productPage}",
+					template: "Products/Page{productPage}",
 					defaults: new { Controller = "Product", action = "List" });
 				routes.MapRoute(
 					name: "default",
