@@ -1,0 +1,8 @@
+﻿@model Product
+
+<div class="product">
+    <img src="~/img/@Model.NameImg'.jpg" alt="@Model.NameImg">
+    <h4>@Model.Name <span>[@Model.Category]</span></h4>
+    <p>@Model.Description</p>
+    <button>В корзину<span class="price">@Model.Price.ToString("c")</span></button>
+</div>

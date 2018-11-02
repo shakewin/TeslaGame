@@ -165,6 +165,12 @@ body {
     color: var(--dark-bg);
 }
 
+.nav {
+    grid-column: span 4;
+    text-align: right;
+    margin-bottom: 25px;
+}
+
 .btn {
     padding: 6px 12px;
     border-radius: 3px;
