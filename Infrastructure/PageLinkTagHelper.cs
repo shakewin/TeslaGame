@@ -10,7 +10,7 @@ namespace TeslaGame.Infrastructure
 {
 	[HtmlTargetElement("div", Attributes = "page-model")]
 	public class PageLinkTagHelper : TagHelper
-    {
+	{
 		IUrlHelperFactory urlHelperFactory;
 
 		public PageLinkTagHelper(IUrlHelperFactory helperFactory)
@@ -41,4 +41,5 @@ namespace TeslaGame.Infrastructure
 			output.Content.AppendHtml(result.InnerHtml);
 
 		}
+	}
 }
