@@ -20,7 +20,7 @@ namespace TeslaGame.Models
 		public virtual void RemoveLine(Product product) =>
 			lineCollection.RemoveAll(l => l.Product.ProductID == product.ProductID);
 
-		public virtual void ComputeTotalValue(Product product) =>
+		public virtual decimal ComputeTotalValue() =>
 			lineCollection.Sum(p => p.Product.Price * p.Quantity);
 
 		public virtual void Clear() => lineCollection.Clear();

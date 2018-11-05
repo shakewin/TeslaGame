@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Linq;
 using TeslaGame.Infrastructure;
 using TeslaGame.Models;
+using TeslaGame.Models.ViewModels;
 
 namespace TeslaGame.Controllers
 {
@@ -16,6 +16,9 @@ namespace TeslaGame.Controllers
 			repository = repo;
 		}
 
+		public ViewResult Index(string returnUrl) =>
+			View(new CartIndexViewModel { Cart = GetCart(), ReturnUrl = returnUrl });
+
 		public RedirectToActionResult AddToCart(int productId, string returnUrl)
 		{
 			Product product = repository.Products.FirstOrDefault(p => p.ProductID == productId);
@@ -27,7 +30,7 @@ namespace TeslaGame.Controllers
 				SaveCart(cart);
 			}
 
-			return RedirecctToAction("Index", new { returnUrl });
+			return RedirectToAction("Index", new { returnUrl });
 		}
 
 		public RedirectToActionResult RemoveToCart(int productId, string returnUrl)
