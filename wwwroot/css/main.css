@@ -197,10 +197,11 @@ body {
 
     text-align: center;
     margin-bottom: 15px;
+    min-height: 400px;
 }
 
 table {
-    font-size: 22px;
+    font-size: 18px;
     text-align: center;
     border-collapse: collapse;
     border: 2px solid var(--dark-bg);

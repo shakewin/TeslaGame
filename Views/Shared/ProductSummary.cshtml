@@ -6,7 +6,7 @@
     <p>@Model.Description</p>
     <form id="@Model.ProductID" asp-action="AddToCart" asp-controller="Cart" method="post">
         <input type="hidden" asp-for="ProductID" />
-        <input type="hidden" name="returnUtl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+        <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
         <button type="submit">В корзину<span class="price">@Model.Price.ToString("c")</span></button>
     </form>
 </div>
