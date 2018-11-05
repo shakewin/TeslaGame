@@ -9,7 +9,7 @@ namespace TeslaGame.Models
 
 		public virtual void AddItem(Product product, int quantity)
 		{
-			CartLine line = lineCollection.Where(p => p.Product.ProductID == product.ProductID).FirstOrDefault();
+			CartLine line = lineCollection.FirstOrDefault(p => p.Product.ProductID == product.ProductID) ;
 			if (line == null)
 			{
 				lineCollection.Add(new CartLine { Product = product, Quantity = quantity });

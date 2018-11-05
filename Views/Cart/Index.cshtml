@@ -1,37 +1,36 @@
 ﻿@model CartIndexViewModel
-
-<h2>Ваша Корзина</h2>
-<table>
-    <thead>
-        <tr>
-            <th>Кличество</th>
-            <th>Игра</th>
-            <th>Цена</th>
-            <th>Итоговая цена</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var line in Model.Cart.Lines)
-        {
+<div class="cart">
+    <h2>Ваша Корзина</h2>
+    <table>
+        <thead>
             <tr>
-                <td>@line.Quantity</td>
-                <td>@line.Product.Name</td>
-                <td>@line.Product.Price.ToString("c")</td>
+                <th>Кличество</th>
+                <th>Игра</th>
+                <th>Цена</th>
+                <th>Итоговая цена</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var line in Model.Cart.Lines)
+            {
+                <tr>
+                    <td>@line.Quantity</td>
+                    <td>@line.Product.Name</td>
+                    <td>@line.Product.Price.ToString("c")</td>
+                    <td>
+                        @((line.Quantity * line.Product.Price).ToString("c"))
+                    </td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total:</td>
                 <td>
-                    @((line.Quantity * line.Product.Price).ToString("c"))
+                    @Model.Cart.ComputeTotalValue().ToString("c")
                 </td>
             </tr>
-        }
-    </tbody>
-    <tfoot>
-        <tr>
-            <td colspan="3">Total:</td>
-            <td>
-                @Model.Cart.ComputeTotalValue().ToString("c")
-            </td>
-        </tr>
-    </tfoot>
-</table>
-<div>
-    <a class="btn btn-select" href="@Model.ReturnUrl">Continue shopping</a>
+        </tfoot>
+    </table>
+    <div><a href="@Model.ReturnUrl" class="btn btn-select">Продолжить покупку</a></div>
 </div>
