@@ -97,6 +97,11 @@ body {
     transition: all .3s;
     color: #fff;
 }
+
+.category-select a {
+    background-color: rgb(170, 160, 160);
+}
+
 .menu li:first-child a {
     padding-top: 20px;
 }

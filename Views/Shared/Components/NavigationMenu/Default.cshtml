@@ -10,7 +10,7 @@
 
 @foreach (string category in Model)
 {
-    <li>
+    <li class="@(category == ViewBag.SelectedCategory ? "category-select" : "" )">
         <a asp-action="List"
            asp-controller="Product"
            asp-route-category="@category"
