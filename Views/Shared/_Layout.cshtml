@@ -31,7 +31,9 @@
             </div>
         </div>
         <div class="navbar">
-            @await Component.InvokeAsync("NavigationMenu")
+            <ul class="menu">
+                @await Component.InvokeAsync("NavigationMenu")
+            </ul>
         </div>
         @RenderBody()
         <div class="footer">
