@@ -17,7 +17,7 @@ namespace TeslaGame.Models
 			else line.Quantity += quantity;
 		}
 
-		public virtual void RemoveLive(Product product) =>
+		public virtual void RemoveLine(Product product) =>
 			lineCollection.RemoveAll(l => l.Product.ProductID == product.ProductID);
 
 		public virtual void ComputeTotalValue(Product product) =>
