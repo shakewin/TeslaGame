@@ -209,10 +209,11 @@ table {
     margin: 10px auto 20px;
 }
 
-th, td:first-child {
+th, tfoot td:first-child {
     background: rgb(170, 160, 160);
     color: var(--dark-bg);
     padding: 10px 20px;
+    font-weight: 700;
 }
 
 th, td {
@@ -225,8 +226,8 @@ td {
     background: rgba(212, 197, 197, 0.445);
 }
 
-th:first-child, td:first-child {
-   text-align: left;
+tfoot td:first-child {
+   text-align: right;
 }
 
 .footer {
