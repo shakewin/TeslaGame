@@ -277,11 +277,16 @@ tfoot td:first-child {
     margin-bottom: 15px;
 }
 
+.complete {
+    grid-column: span 9;
+    font-size: 24px;
+    margin-left: 25px;
+}
+
 .footer {
     grid-column: span 12;
-    display : grid;
+    display: grid;
     grid-template-columns: repeat(3, 4fr);
-
     background-color: var(--dark-bg);
 }
 
