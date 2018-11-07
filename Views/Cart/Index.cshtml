@@ -8,6 +8,7 @@
                 <th>Цена</th>
                 <th>Количество</th>
                 <th>Итоговая цена</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -20,13 +21,20 @@
                 <td>
                     @((line.Quantity * line.Product.Price).ToString("c"))
                 </td>
+                <td>
+                    <form asp-controller="Cart" asp-action="RemoveToCart" method="post">
+                        <input type="hidden" name="ProductID" value="@line.Product.ProductID" />
+                        <input type="hidden" asp-for="@Model.ReturnUrl" vale="@Model.ReturnUrl" />
+                        <button type="submit" class="btn btn-remove">Удалить</button>
+                    </form>
+                </td>
             </tr>
             }
         </tbody>
         <tfoot>
             <tr>
                 <td colspan="3">Сумма к оплате:</td>
-                <td>
+                <td colspan="2">
                     @Model.Cart.ComputeTotalValue().ToString("c")
                 </td>
             </tr>
