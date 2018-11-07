@@ -2,7 +2,7 @@
 <div class="order-form">
     <h2>Оформление заказа</h2>
     <p>Пожалуйста введите свои данные</p>
-
+    <div asp-validation-summary="All" style="color: #ff0000"></div>
     <form asp-action="checkout" method="post">
         <h3>Идентификатор</h3>
         <div>
