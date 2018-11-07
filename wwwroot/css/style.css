@@ -195,20 +195,20 @@ body {
     margin: 1px;
 }
 
-.btn-remove, .btn-select {
+.btn-cart, .btn-select {
     background-color: var(--dark-bg);
     color: rgb(251, 243, 243);
     transition: all .2s;
 }
 
-.btn-remove {
+.btn-cart {
     text-decoration: none;
     cursor: pointer;
     border: 2px solid var(--dark-bg);
 }
 
-.btn-remove:hover {
-    box-shadow: inset 8em 0 #b20f0f;
+.btn-cart:hover {
+    box-shadow: inset 12em 0 #b20f0f;
     color: whitesmoke;
     transition: all .2s;
 }

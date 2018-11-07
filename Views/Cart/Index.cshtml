@@ -25,7 +25,7 @@
                     <form asp-controller="Cart" asp-action="RemoveToCart" method="post">
                         <input type="hidden" name="ProductID" value="@line.Product.ProductID" />
                         <input type="hidden" asp-for="@Model.ReturnUrl" vale="@Model.ReturnUrl" />
-                        <button type="submit" class="btn btn-remove">Удалить</button>
+                        <button type="submit" class="btn btn-cart">Удалить</button>
                     </form>
                 </td>
             </tr>
@@ -40,5 +40,8 @@
             </tr>
         </tfoot>
     </table>
-    <div><a href="@Model.ReturnUrl" class="btn btn-select">Продолжить покупку</a></div>
+    <div>
+        <a href="@Model.ReturnUrl" class="btn btn-cart">Продолжить покупку</a>
+        <a class="btn btn-cart" asp-controller="Order" asp-action="Checkout">Оформить заказ</a>
+    </div>
 </div>
