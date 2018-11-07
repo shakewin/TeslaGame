@@ -46,6 +46,18 @@ body {
     font-size: 22px;
 }
 
+.shop {
+    float: right;
+    font-size: 22px;
+}
+
+.shop a {
+    border: .7px solid var(--dark-bg);
+    padding: 4px;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
 .promo {
     grid-column: span 12;
     background-image: url(../img/bg-promo.png);
