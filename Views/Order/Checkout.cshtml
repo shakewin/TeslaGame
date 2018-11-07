@@ -1,5 +1,31 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model Order
+<div class="order-form">
+    <h2>Оформление заказа</h2>
+    <p>Пожалуйста введите свои данные</p>
+
+    <form asp-action="checkout" method="post">
+        <h3>Идентификатор</h3>
+        <div>
+            <input asp-for="Nickname" />
+        </div>
+        <h3>Страна</h3>
+        <div>
+            <input asp-for="Country" />
+        </div>
+        <h3>E-mail</h3>
+        <div>
+            <input asp-for="Mail" />
+        </div>
+        <h3>Выберите способы оплаты:</h3>
+        <div class="paychange">
+            <Label><input asp-for="Pay" type="radio" value="Qiwi" />Qiwi</Label>
+            <Label><input asp-for="Pay" type="radio" value="WebMoney" />WebMoney</Label>
+            <Label><input asp-for="Pay" type="radio" value="Yandex" />Yandex</Label>
+            <Label><input asp-for="Pay" type="radio" value="Card" />Card</Label>
+        </div>
+        <div>
+            <input class="btn btn-cart" type="submit" value="Заказать" />
+        </div>
+    </form>
+
+</div>
