@@ -9,6 +9,10 @@
 </head>
 <body>
     <div class="wrapper">
+        @if (TempData["message"] != null)
+        {
+            <div>@TempData["message"]</div>
+        }
         <h2>@ViewBag.Title</h2>
         @RenderBody()
     </div>
