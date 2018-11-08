@@ -226,8 +226,9 @@ body {
     min-height: 400px;
 }
 
-.orders {
-    text-align: center;
+.products td .btn-cart {
+    margin: 15px;
+    font-size: 12px;
 }
 
 table {

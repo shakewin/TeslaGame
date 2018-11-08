@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Product>
+@{
+    ViewBag.Title = "Все игры";
+    Layout = "_AdminLayout";
+}
+
+<div class="products">
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Название</th>
+            <th>Цена</th>
+            <th >Изменить</th>
+            <th>Удалить</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProductID</td>
+                <td>@item.Name</td>
+                <td>@item.Price.ToString("c")</td>
+                <td colspan="2">
+                    <form asp-action="delete" method="post">
+                        <a asp-action="edit" class="btn btn-cart"
+                           asp-route-productId="@item.ProductID">
+                            Изменить
+                        </a>
+                        <input type="hidden" name="ProductID" value="@item.ProductID" />
+                        <button type="submit" class="btn btn-cart">
+                            Удалить
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+         <tr>
+            <th colspan="5">
+                <a asp-action="create" class="btn btn-cart">Добавить Игру</a>
+            </th>
+         </tr>
+    </table>
+</div>
