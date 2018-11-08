@@ -1,0 +1,35 @@
+﻿@model Product
+@{
+    ViewBag.Title = "Изменение товара";
+    Layout = "_AdminLayout";
+}
+
+
+    <form  class="edit" asp-action="edit" method="post">
+        <input type="hidden" asp-for="ProductID" />
+        <div>
+            <label asp-for="Name">Название</label>
+            <input asp-for="Name" />
+        </div>
+        <div>
+            <label asp-for="Description">Описание</label>
+            <textarea asp-for="Description"></textarea>
+        </div>
+        <div>
+            <label asp-for="NameImg">Название изображения</label>
+            <input asp-for="NameImg" />
+        </div>
+        <div>
+            <label asp-for="Category">Магазин</label>
+            <input asp-for="Category" />
+        </div>
+        <div>
+            <label asp-for="Price">Цена</label>
+            <input asp-for="Price" />
+        </div>
+        <div>
+            <button class="btn btn-cart" type="submit">Сохранить</button>
+            <a asp-action="index" class="btn btn-cart">Отмена</a>
+        </div>
+    </form>
+

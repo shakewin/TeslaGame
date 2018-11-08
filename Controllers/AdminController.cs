@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 using TeslaGame.Models;
 
 namespace TeslaGame.Controllers
@@ -12,5 +13,7 @@ namespace TeslaGame.Controllers
 		}
 
 		public ViewResult Index() => View(repository.Products);
+
+		public ViewResult Edit(int productId) => View(repository.Products.FirstOrDefault(p => p.ProductID == productId));
 	}
 }
