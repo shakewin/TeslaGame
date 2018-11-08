@@ -305,6 +305,11 @@ tfoot td:first-child {
     color: #c41818;
 }
 
+.input-validation-error {
+    border-color: red;
+    background-color: #fee;
+}
+
 .footer {
     grid-column: span 12;
     display: grid;
