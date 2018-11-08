@@ -9,27 +9,32 @@
         <input type="hidden" asp-for="ProductID" />
         <div>
             <label asp-for="Name">Название</label>
+            <div><span asp-validation-for="Name"></span></div>
             <input asp-for="Name" />
         </div>
         <div>
             <label asp-for="Description">Описание</label>
+            <div><span asp-validation-for="Description"></span></div>
             <textarea asp-for="Description"></textarea>
         </div>
         <div>
             <label asp-for="NameImg">Название изображения</label>
+            <div><span asp-validation-for="NameImg"></span></div>
             <input asp-for="NameImg" />
         </div>
         <div>
             <label asp-for="Category">Магазин</label>
+            <div><span asp-validation-for="Category"></span></div>
             <input asp-for="Category" />
         </div>
         <div>
             <label asp-for="Price">Цена</label>
+            <div><span asp-validation-for="Price"></span></div>
             <input asp-for="Price" />
         </div>
         <div>
             <button class="btn btn-cart" type="submit">Сохранить</button>
-            <a asp-action="index" class="btn btn-cart">Отмена</a>
+            <a asp-action="Index" class="btn btn-cart">Отмена</a>
         </div>
     </form>
 

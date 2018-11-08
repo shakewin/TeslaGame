@@ -301,8 +301,8 @@ tfoot td:first-child {
     margin: 20px 0;
 }
 
-.edit .btn-cart {
-    font-size: 18px;
+.edit span {
+    color: #c41818;
 }
 
 .footer {
