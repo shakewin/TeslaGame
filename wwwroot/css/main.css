@@ -8,6 +8,7 @@ body {
 * {
     text-decoration: none;
     outline: none;
+    list-style-type: none;
 }
 
 :root {
@@ -301,7 +302,7 @@ tfoot td:first-child {
     margin: 20px 0;
 }
 
-.edit span {
+.edit span, .order-form span {
     color: #c41818;
 }
 

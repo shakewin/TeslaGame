@@ -2,21 +2,25 @@
 <div class="order-form">
     <h2>Оформление заказа</h2>
     <p>Пожалуйста введите свои данные</p>
-    <div asp-validation-summary="All" style="color: #ff0000"></div>
     <form asp-action="checkout" method="post">
+        <div asp-validation-summary="ModelOnly" style="color : red;"></div>
         <h3>Идентификатор</h3>
+        <div><span asp-validation-for="Nickname"></span></div>
         <div>
             <input asp-for="Nickname" />
         </div>
         <h3>Страна</h3>
+        <div><span asp-validation-for="Country"></span></div>
         <div>
             <input asp-for="Country" />
         </div>
         <h3>E-mail</h3>
+        <div><span asp-validation-for="Mail"></span></div>
         <div>
             <input asp-for="Mail" />
         </div>
         <h3>Выберите способы оплаты:</h3>
+        <div><span asp-validation-for="Pay"></span></div>
         <div class="paychange">
             <Label><input asp-for="Pay" type="radio" value="Qiwi" />Qiwi</Label>
             <Label><input asp-for="Pay" type="radio" value="WebMoney" />WebMoney</Label>
