@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TeslaGame.Models;
 
@@ -15,9 +16,11 @@ namespace TeslaGame.Controllers
 			cart = cartService;
 		}
 
+		[Authorize]
 		public ViewResult List() => View(repository.Orders.Where(o => !o.Shipped));
 
 		[HttpPost]
+		[Authorize]
 		public IActionResult MarkShipped(int orderID)
 		{
 			Order order = repository.Orders.FirstOrDefault(o => o.OrderID == orderID);
