@@ -29,7 +29,7 @@ namespace TeslaGame
 			services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppIdentityDbContext>().AddDefaultTokenProviders();
 			services.AddTransient<IProductRepository, EFProductRepository>();
 			services.AddTransient<IOrderRepository, EFOrderRepository>();
-			services.AddScoped<Cart>(sp => SessionCart.GetCart(sp));
+			services.AddScoped<Cart>(SessionCart.GetCart);
 			services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 			services.AddMvc();
 			services.AddMemoryCache();
@@ -66,6 +66,7 @@ namespace TeslaGame
 					template: "{controller=Product}/{action=List}/{id?}");
 			});
 			SeedData.EnsurePopulated(app);
+			IdentitySeedData.EnsurePopulated(app);
 		}
     }
 }
