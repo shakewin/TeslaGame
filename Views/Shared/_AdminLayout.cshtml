@@ -10,10 +10,11 @@
 <body>
     <div class="wrapper">
         @if (TempData["message"] != null)
-        {
-            <div>@TempData["message"]</div>
-        }
+    {
+        <div>@TempData["message"]</div>
+}
         <h2>@ViewBag.Title</h2>
+        <a class="btn btn-cart" asp-action="Logout" asp-controller="Account">Выйти</a>
         @RenderBody()
     </div>
 </body>
